@@ -8,10 +8,12 @@ import java.util.Scanner;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 
-// PARA SALIR DEL ATTACH -> Pulsa Ctrl + P y justo después Ctrl + Q.
+// PARA ACCEDER AL SERVIDOR -> ssh -i /Users/samuelolivas/FP/PSP/KeysFTP/ssh-key-2026-02-05.key ubuntu@80.225.187.167
+// PARA HACER EL ATTACH -> sudo docker attach mi-juego
+// PARA SALIR DEL ATTACH -> Pulsa Ctrl + P y justo después Ctrl + Q
 
 public class Cliente {
-    private static final String SERVER_IP = "80.225.187.167"; // Cambiar a la IP de Oracle si es necesario
+    private static final String SERVER_IP = "80.225.187.167";
     private static final int SERVER_PORT = 8080;
 
     public static void main(String[] args) {
@@ -33,7 +35,7 @@ public class Cliente {
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
-            // --- 2. PETICIÓN HTTP DINÁMICA (Parece más real) ---
+            // --- 2. PETICIÓN HTTP DINÁMICA ---
             // Generamos un ID aleatorio para que cada petición sea única
             long idSesion = System.currentTimeMillis();
 

@@ -75,8 +75,6 @@ public class ClienteHandler implements Runnable {
         }
     }
 
-    // --- MÉTODOS QUE TE FALTABAN ---
-
     public void sendMessage(String msg) {
         out.println(msg);
     }

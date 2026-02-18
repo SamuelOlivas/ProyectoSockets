@@ -151,7 +151,7 @@ public class Servidor {
         }
     }
 
-    // --- MÉTODOS DEL JUEGO (Igual que antes) ---
+    // --- MÉTODOS DEL JUEGO ---
 
     public static void lanzarSiguientePregunta() {
         if (clientes.isEmpty()) {
