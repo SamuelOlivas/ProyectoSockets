@@ -22,10 +22,8 @@ public class ClienteHandler implements Runnable {
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            // --- FASE 0: Procesar cabeceras HTTP y JSON (Requisito del profesor) ---
+            // --- FASE 0: Procesar cabeceras HTTP y JSON ---
             String lineaHttp;
-            // Leemos todo el bloque HTTP (cabeceras + cuerpo JSON) hasta encontrar la llave
-            // de cierre "}"
             while ((lineaHttp = in.readLine()) != null) {
                 System.out.println("[PETICIÓN HTTP] " + lineaHttp); // Imprime para que se vea en el servidor
                 if (lineaHttp.trim().equals("}")) {
